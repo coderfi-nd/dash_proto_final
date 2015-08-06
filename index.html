@@ -1,0 +1,48 @@
+<html ng-app="dashboard">
+<head>
+<meta charset="utf-8">
+<!-- vendors -->
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+<script type="text/javascript" src = "/bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/bower_components/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/bower_components/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="/bower_components/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!-- app -->
+<script type="text/javascript" src="app/javascript/app.js"></script>
+<!-- directives -->
+
+<!-- controllers -->
+<script type="text/javascript" src="app/javascript/controllers/set1_index.js"></script>
+<script type="text/javascript" src="app/javascript/controllers/set1_create_controller.js"></script>
+<script type="text/javascript" src="app/javascript/controllers/set1_detail_controller.js"></script>
+<script type="text/javascript" src="app/javascript/controllers/set1_edit_controller.js"></script>
+<script type="text/javascript" src="app/javascript/controllers/set1_list_controller.js"></script>
+<!-- services -->
+<script type="text/javascript" src="app/javascript/services/set1_getter.js"></script>
+<script type="text/javascript" src="app/javascript/services/set1.js"></script>
+<script type="text/javascript" src="app/javascript/services/matcher.js"></script>
+</head>
+
+<body>
+<!-- header -->
+<div class = "container-fluid">
+	<div class = "navbar header">
+		<div class = "navbar-brand">
+		<img style = " margin-left: -15px; margin-top: -50px;" alt="Brand" src="images/NinthDecimal.jpg">
+		</div>
+		<ul class = "nav nav-pills">
+			<li><a ui-sref = "home">Home</a></li>
+			<li><a ui-sref = "set1.list">Set #1</a></li>
+			<li><a ui-sref = "set2">Set #2</a></li>
+			<li><a ui-sref = "set3">Set #3</a></li>
+		</ul>
+		</div>
+
+		<!-- make it a container -->
+		<div ui-view class='container-fluid'></div>
+	</div>
+</div>
+</body>
+</html>
