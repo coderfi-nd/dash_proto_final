@@ -57,17 +57,26 @@ angular.module("dashboard", ['ngResource', 'ui.router'])
 		})
 
 		.state('set1.list.detail', {
-			url:'/{contactId:[0-9]{1,4}}',
+			url:'/{id:[0-9]{1,4}}',
 			controller: 'set1_detail_controller',
 			templateUrl: 'app/views/set1_view.list.detail.html'
 
 		})
 
+		// replace a detail view with an edit view
+		// the view accepts a title stateParameter passed from a parent state
 		.state('set1.list.detail.edit', {
-			url:'/edit',
-			controller: 'set1_edit_controller',
-			templateUrl: 'app/views/set1_view.list.detail.edit.html'
 
+			views: {
+				'@set1.list': {
+					// have to explicitly metion id here otherwise, won't pass
+					url: '/{id:[0-9]{1,4}}',
+					templateUrl: 'app/views/set1_view.list.detail.edit.html',
+					controller: 'set1_edit_controller'
+				}
+
+			}
+			
 		})
 
 		.state('set1.new', {

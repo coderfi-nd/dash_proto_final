@@ -6,5 +6,5 @@ angular.module('dashboard').controller('set1_list_controller', function ($scope,
 	// });
 	
 	$scope.data = Set1;
-
+	
 });

@@ -1,11 +1,9 @@
 
-<h1>Set1 List ok</h1>	
-
 <div ui-view></div>
 
 <div class = "row">
-	<div ng-repeat='contact in contacts' class="col-sm-6">
+	<div ng-repeat='chart in charts' class="col-sm-6">
 		<!-- you call a state and pass id as well -->
-		<h3><a ui-sref="set1.list.detail({contactId:contact.id})">{{contact.name}}</a></h3>
+		<h3><a ui-sref="set1.list.detail({id:chart.id})">{{chart.type}}</a></h3>
 	</div>
 </div>

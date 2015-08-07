@@ -2,7 +2,7 @@ angular.module('dashboard').controller('set1_index_controller', function ($scope
 {	
 
 	// pass data factory to the index scope
-	$scope.contacts = Set1_Getter;
-
+	$scope.charts = Set1_Getter;
 	
+
 });

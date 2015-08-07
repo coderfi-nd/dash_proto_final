@@ -5,8 +5,6 @@ angular.module('dashboard').controller('set1_create_controller', function ($scop
 	// 	$scope.data = data;
 
 	// });
-	
-
 	$scope.data = Set1;
 
 });

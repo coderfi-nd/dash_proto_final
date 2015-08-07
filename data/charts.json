@@ -3,6 +3,7 @@
     {
       "id": 1,
       "class": "nvd3",
+      "title": "default_title",
       "type": "discreteBarChart",
       "data": {
     "key": "Cumulative Return",
@@ -22,6 +23,7 @@
     {
       "id": 2,
       "class": "nvd3",
+      "title": "default_title",
       "type": "historicalBarChart",
       "data": {
         "key" : "Quantity" ,
@@ -39,6 +41,7 @@
     {
       "id": 3,
       "class": "nvd3",
+      "title": "default_title",
       "type": "pieChart",
       "data" : [
         {

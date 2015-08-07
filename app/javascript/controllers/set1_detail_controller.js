@@ -1,6 +1,10 @@
-angular.module('dashboard').controller('set1_detail_controller', ['$scope', '$stateParams', 'Utils', function ($scope, $stateParams, Utils) 
+angular.module('dashboard').controller('set1_detail_controller', ['$scope', '$stateParams', '$state', 'Utils', function ($scope, $stateParams, $state, Utils) 
 {
 	// do not need to call for service again, just pass parameters
-	$scope.contact = Utils.findById($scope.contacts, $stateParams.contactId);
+	$scope.chart = Utils.findById($scope.charts, $stateParams.id);
+	// go back to a relative parent
+	$scope.back = function() {
+		$state.go('^');
+	};
 
 }]);

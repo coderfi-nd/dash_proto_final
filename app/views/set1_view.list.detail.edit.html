@@ -1,1 +1,26 @@
-<h1>Set1 detail edit</h1>
+	
+<style>
+	.ng-invalid.ng-dirty {
+
+		border-color: #FA787E;
+	}
+
+	.ng-valid.ng-dirty {
+
+		border-color:#78FA89;
+	}
+
+</style>
+
+<!-- Form Validations 101 -->
+<form name="nameForm" ng-submit="nameForm.$valid" class="form-inline" role = "form" novalidate>
+	<div class="form-group">
+	<label for="chart.type">{{chart.type}}:</label>
+		<input type="text" ng-model="chart.title" class="form-control" placeholder="Enter new title"/required>
+	</div>
+	<div class = "form-group">
+		<button class="btn btn-default btn-lg" ng-class="validate(nameForm.$valid)" ng-click="done()">
+			<span class="glyphicon glyphicon-thumbs-up" area-hidden = "true"></span>Done
+		</button>
+	</div>
+</form>
