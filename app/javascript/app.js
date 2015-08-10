@@ -1,4 +1,4 @@
-angular.module("dashboard", ['ngResource', 'ui.router'])
+angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'])
 
 .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams ){
 	$rootScope.$state = $state;	
@@ -36,12 +36,22 @@ angular.module("dashboard", ['ngResource', 'ui.router'])
 		abstract : true,
 		url:'/set1',
 
-		// is used to resolve async controller dependeincies (Set1Getter)
+		// is used to resolve async controller dependeincies (Set1Getter, myStorageService)
 		resolve: {
+
+			
 			Set1_Getter: ['Set1_Getter', 
 			function(Set1_Getter) {
 				return Set1_Getter.all();
 			}]
+
+			// myStorageService: ['myStorageService',
+			// function(myStorageService) {
+			// 	return myStorageService;
+
+			// }],
+
+			
 
 		},
 
@@ -53,6 +63,7 @@ angular.module("dashboard", ['ngResource', 'ui.router'])
 		// state will become active when parent is naviagated to 
 		.state('set1.list', {
 			url:'',
+			controller: 'set1_list_controller',
 			templateUrl: 'app/views/set1_view.list.html'
 		})
 

@@ -6,14 +6,21 @@
 <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
 <script type="text/javascript" src = "/bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/bower_components/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/angular-html5-storage/dist/angular-html5-storage.js"></script>
+<script type="text/javascript" src="/bower_components/angular-html5-storage/dist/angular-html5-storage.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-html5-storage/src/angular-html5-storage.js"></script>
 <script type="text/javascript" src="/bower_components/bower_components/angular-resource/angular-resource.js"></script>
 <script type="text/javascript" src="/bower_components/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/nvd3/nv.d3.js"></script> <!-- or use another assembly -->
+<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+<link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
 <!-- app -->
 <script type="text/javascript" src="app/javascript/app.js"></script>
 <!-- directives -->
 
 <!-- controllers -->
+<script type="text/javascript" src="app/javascript/controllers/set1_list_controller.js"></script>
 <script type="text/javascript" src="app/javascript/controllers/set1_index.js"></script>
 <script type="text/javascript" src="app/javascript/controllers/set1_create_controller.js"></script>
 <script type="text/javascript" src="app/javascript/controllers/set1_detail_controller.js"></script>
@@ -21,6 +28,7 @@
 <!-- services -->
 <script type="text/javascript" src="app/javascript/services/set1_getter.js"></script>
 <script type="text/javascript" src="app/javascript/services/matcher.js"></script>
+<script type="text/javascript" src="app/javascript/services/storageService.js"></script>
 </head>
 
 <body>
@@ -37,10 +45,8 @@
 			<li><a ui-sref = "set3">Set #3</a></li>
 		</ul>
 		</div>
-
 		<!-- make it a container -->
-		<div ui-view class='container-fluid'></div>
 	</div>
-</div>
+	<div ui-view class='container-fluid'></div>
 </body>
 </html>

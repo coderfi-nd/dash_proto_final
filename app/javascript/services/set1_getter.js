@@ -14,6 +14,8 @@ angular.module('dashboard').factory('Set1_Getter', ['$http', 'Utils', function($
 		return charts;
 	};
 
+
+
 	factory.get = function (id) {
 		return charts.then(function () {
 			return Utils.findById(charts, id);
