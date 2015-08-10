@@ -4,10 +4,8 @@
 
 	<a ui-sref = 'set1.list.detail.edit({id:{{chart.id}}})' class = 'btn btn-default'>Edit Widget</a>
 	<button class="btn btn-default" ng-click="back()">Go Back</button>
-	<a href = '' class = 'btn btn-danger'>Delete</a>
+	<a href = '' ng-click="delete()" class = 'btn btn-danger'>Delete</a>
 </div>
-
-<p><span class='label label-info'>Hello hello</span></p>
 
 <!-- loads set1_view.detail.edit.html template -->
 <div ui-view></div>

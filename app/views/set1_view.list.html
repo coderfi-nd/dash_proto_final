@@ -2,15 +2,13 @@
 <div ui-view></div>
 <meta charset="utf-8" />
 <div class = "row">
-	<div ng-repeat='chart in charts track by $index' class="col-sm-6">
+	<div ng-repeat='chart in charts track by $index' class="col-sm-6 widget">
 		<!-- you call a state and pass id as well -->
-		<h2>{{chart.title}}</h2>
-		<h3>{{$index}}</h3>
+		<h3><a ui-sref="set1.list.detail({id:chart.id})">{{chart.title}}</a></h3>
+		<h4><span class='label label-info'>{{chart.type}}</span></h4>
 		<!-- you need to pass already associated data to options and to data -->
 		<!-- also <an pass chart index here -->
-
 		<nvd3 options="options[$index]" data = "data[$index]"></nvd3>
-		<h4><a ui-sref="set1.list.detail({id:chart.id})">{{chart.type}}</a></h4>
 	</div>
 </div>
 

@@ -9,7 +9,8 @@ angular.module('dashboard').controller('set1_list_controller', function ($scope)
 	$scope.options0 = {
             chart: {
                 type: 'discreteBarChart',
-                height: 450,
+                height: 400,
+                width: 500,
                 margin : {
                     top: 20,
                     right: 20,
@@ -77,7 +78,8 @@ angular.module('dashboard').controller('set1_list_controller', function ($scope)
         $scope.options1 = {
             chart: {
                 type: 'historicalBarChart',
-                height: 450,
+                height: 370,
+                width: 500,
                 margin : {
                     top: 20,
                     right: 20,
@@ -120,7 +122,8 @@ angular.module('dashboard').controller('set1_list_controller', function ($scope)
              $scope.options2 = {
             chart: {
                 type: 'pieChart',
-                height: 500,
+                height: 400,
+                width: 500,
                 x: function(d){return d.key;},
                 y: function(d){return d.y;},
                 showLabels: true,
