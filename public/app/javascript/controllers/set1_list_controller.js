@@ -1,4 +1,4 @@
-angular.module('dashboard').controller('set1_list_controller', function ($scope)
+angular.module('dashboard').controller('set1_list_controller', function ($scope, WidgetLoader)
 {	
 
 	// list controller defines what will be displayed

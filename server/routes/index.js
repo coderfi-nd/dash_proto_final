@@ -12,6 +12,4 @@ router.get('/set1', function (req, res){
 	});
 });
 
-
-
 module.exports = router;

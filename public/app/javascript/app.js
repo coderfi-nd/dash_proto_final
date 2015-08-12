@@ -53,6 +53,15 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 
 		// state will become active when parent is naviagated to 
 		.state('set1.list', {
+			resolve: {
+				WidgetLoader:['WidgetLoader', 
+				function(WidgetLoader) {
+					return WidgetLoader;
+
+				}]
+
+			},
+
 			url:'',
 			controller: 'set1_list_controller',
 			templateUrl: 'app/views/set1_view.list.html'
