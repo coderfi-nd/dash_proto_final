@@ -56,10 +56,9 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 			resolve: {
 				WidgetLoader:['WidgetLoader', 
 				function(WidgetLoader) {
-					return WidgetLoader;
+					return WidgetLoader.all();
 
 				}]
-
 			},
 
 			url:'',

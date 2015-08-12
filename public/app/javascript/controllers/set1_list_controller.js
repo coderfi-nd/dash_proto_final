@@ -4,6 +4,7 @@ angular.module('dashboard').controller('set1_list_controller', function ($scope,
 	// list controller defines what will be displayed
 	// you will get data from the services
 	// list controller just creates a template
+    $scope.crap = WidgetLoader[0].widgets;
 
 
 	$scope.options0 = {
