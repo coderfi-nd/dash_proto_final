@@ -5,7 +5,7 @@ angular.module('dashboard').controller('set1_edit_controller', ['$scope', '$stat
 	$scope.chart = Utils.findById($scope.charts, $stateParams.id);
 	// return up one state - back to detail
 
-
+	
 	$scope.done = function () {
 	$state.go('^', $stateParams);
 

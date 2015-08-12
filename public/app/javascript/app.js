@@ -36,15 +36,15 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 		abstract : true,
 		url:'/set1',
 
-		// is used to resolve async controller dependeincies (Set1Getter, myStorageService)
-		resolve: {
+		// is used to resolve async controller dependeincies
+			resolve: {
 
-			
-			Set1_Getter: ['Set1_Getter', 
-			function(Set1_Getter) {
-				return Set1_Getter.all();
-			}]
-		},
+				Widget: ['Widget', function(Widget) {
+					return Widget;
+
+				}]
+
+			},
 
 		controller: 'set1_index_controller',
 		templateUrl: 'app/views/set1_view.html'
@@ -91,16 +91,15 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 
 		.state('set1.new', {
 			url:'/new',
-			resolve: {
-
-				Widget: ['Widget', function(Widget) {
-					return Widget;
-
-				}]
-
-			},
 			controller: 'set1_create_controller',
 			templateUrl: 'app/views/set1_view.new.html'
+
+		})
+
+		.state('set1.new.data', {
+			url:'/new/data',
+			controller: 'set1_create_data_controller',
+			templateUrl: 'app/views/set1_view.new.data.html'
 
 		})
 

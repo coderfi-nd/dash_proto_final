@@ -1,7 +1,7 @@
 
 angular.module('dashboard').factory('Widget', function () {
 
-	var widgetsArray = [];
+	var optionsArray = [];
 
     // this factory provides chart templates and nothing else
 	var options0 = {

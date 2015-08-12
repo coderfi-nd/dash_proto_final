@@ -1,5 +1,7 @@
-angular.module('dashboard').controller('set1_create_controller', ['$scope', 'Widget', function ($scope, Widget) 
+angular.module('dashboard').controller('set1_create_controller', ['$scope', function ($scope) 
 {
-	$scope.widgetSet = Widget;
+	console.log($scope.templates);
+	
+	
 }]);
 
