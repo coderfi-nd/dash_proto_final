@@ -17,7 +17,7 @@ var routes = require('./routes/index')
 
 var app = express();
 
-
+// csv to json converter
 function csvToJSON(csv){
 	var lines = csv.split("\n");
 	var result = [];
@@ -79,18 +79,6 @@ app.use(function(req, res, next) {
 	
 });
 
-// save obtained files to lci collection
-app.use(function(req, res, next) {
-
-	var db = req.db;
-	var sendable = req.sendable;
-	var lci_collection = db.get('lci');
-	lci_collection.insert(sendable, function(err, doc) {
-		if(err) throw err;
-		next();
-	});
-
-});
 
 // all routes
 app.use('/', routes);
