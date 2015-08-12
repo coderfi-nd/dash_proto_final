@@ -8,7 +8,7 @@ angular.module('dashboard').controller('set1_list_controller', function ($scope,
     
     $scope.data = [];
     $scope.options = [];
-
+    
     for (var i = 0; i < $scope.widgets.length; i++)
     {
 

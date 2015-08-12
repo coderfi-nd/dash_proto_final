@@ -88,7 +88,6 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 			}
 			
 		})
-
 		.state('set1.new', {
 			url:'/new',
 			controller: 'set1_create_controller',
@@ -97,7 +96,7 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 		})
 
 		.state('set1.new.data', {
-			url:'/new/data',
+			url:'/data',
 			controller: 'set1_create_data_controller',
 			templateUrl: 'app/views/set1_view.new.data.html'
 
