@@ -44,15 +44,6 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 			function(Set1_Getter) {
 				return Set1_Getter.all();
 			}]
-
-			// myStorageService: ['myStorageService',
-			// function(myStorageService) {
-			// 	return myStorageService;
-
-			// }],
-
-			
-
 		},
 
 		controller: 'set1_index_controller',
@@ -92,6 +83,14 @@ angular.module("dashboard", ['ngResource', 'ui.router', 'ngHTML5Storage', 'nvd3'
 
 		.state('set1.new', {
 			url:'/new',
+			resolve: {
+
+				Widget: ['Widget', function(Widget) {
+					return Widget;
+
+				}]
+
+			},
 			controller: 'set1_create_controller',
 			templateUrl: 'app/views/set1_view.new.html'
 

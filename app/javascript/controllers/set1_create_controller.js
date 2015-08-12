@@ -1,10 +1,5 @@
-angular.module('dashboard').controller('set1_create_controller', function ($scope, Set1) 
+angular.module('dashboard').controller('set1_create_controller', ['$scope', 'Widget', function ($scope, Widget) 
 {
-	// Set1.all()
-	// .success(function(data) {
-	// 	$scope.data = data;
+	$scope.widgetSet = Widget;
+}]);
 
-	// });
-	$scope.data = Set1;
-
-});
