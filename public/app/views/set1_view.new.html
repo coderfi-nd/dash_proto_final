@@ -1,13 +1,34 @@
 
 	
 <h3>Choose what widget you wanna build</h3>
-<div ng-repeat = 'template in templates'>
-<h2><a ui-sref='set1.new.data' class='btn btn-default' ng-click='changeType(template.chart.type)'>{{template.chart.type}}</a></h2>
 
+<div class = "container-fluid">
+
+	<div class = "row">
+		<div class = "col-md-4">
+			<div ng-repeat = 'template in templates track by $index'>
+
+				<h4>
+						<a ui-sref='set1.new.data' class='btn btn-default' ng-click='changeType(template.chart.type)' ng-mouseenter = "changeParam(template.chart.type, true)" ng-mouseleave = "changeParam(template.chart.type, false)">
+							{{template.chart.type}}
+						</a>
+				</h4>
+
+			</div>
+		</div>
+
+		<div class = "col-md-8" ng-show = "logicArray[previewType]">
+			<nvd3 options="previewOptions[previewType]" data="previewData[previewType]"></nvd3>
+		</div>
+
+	</div>
+	<div ui-view> </div>
 </div>
 
-<div ui-view> </div>
 
-<div class="preview">
 
-</div>
+
+
+
+
+

@@ -11,7 +11,15 @@ router.get('/set1', function (req, res){
 		res.json(docs);
 	});
 });
+	
 
+
+router.post('/set1', function(req, res) {
+ var db = req.db;
+
+ 
+
+});
 // get lci data
 router.get('/lci', function(req, res) {
 	// insert lci data first
@@ -19,13 +27,18 @@ router.get('/lci', function(req, res) {
 	var collection = db.get('lci');
 	var sendable = req.sendable;
 
-	collection.insert(sendable, function(err, doc) {
-		if(err) throw err;
-	});
+	collection.find({}, {}, function(err, docs) {
 
-	// send lci data
-	collection.find({}, {}, function(e, docs) {
+		if(docs == null)
+		{
+			collection.insert(sendable, function(err, docs){
+				if(err) throw err;
+
+			});
+		}
+
 		res.json(docs);
+
 	});
 
 });

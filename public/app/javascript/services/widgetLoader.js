@@ -5,7 +5,7 @@ angular.module('dashboard').factory('WidgetLoader', ['$http', function ($http) {
 
 	var widgets = $http.get('/set1').then(function (resp){
 		return resp.data;
-
+		
 	});
 
 
